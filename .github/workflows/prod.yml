@@ -1,0 +1,25 @@
+name: Python Package using Conda
+
+on:
+  push:
+    branches: [ "PROD" ]
+  pull_request:
+    branches: [ "PROD" ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+    - name: Render Deploy Action
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: srv-ci4cs8enqql46qqvtjvg?key=OpkpREDxd0Y
+        api-key: rnd_TLkKaxyYfuyI8zqUGuOVSQpBTE39
