@@ -10,4 +10,4 @@ def index():
 def msg():
     return '<center><h1>Usando os conceitos de deploy..!!!</h1></center>'
 
-#app.run();
+#app.run()
