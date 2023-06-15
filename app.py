@@ -8,6 +8,6 @@ def index():
 
 @app.route('/msg')
 def msg():
-    return '<center><h1>Usando os conceitos de deploy..!!!</h1></center>'
+    return '<center><h1>testando comandos..!!!</h1></center>'
 
 #app.run()
